@@ -1,8 +1,12 @@
 # Humanizer
 
-[![skills.sh installs](https://skills.sh/b/ml-lubich/humanizer)](https://skills.sh/ml-lubich/humanizer)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Skills: Vercel Labs](https://img.shields.io/badge/Skills-vercel--labs%2Fskills-blue.svg)](https://skills.sh)
+[![Claude Code: Plugin](https://img.shields.io/badge/Claude%20Code-Plugin%20Ready-6366f1.svg)](https://docs.anthropic.com)
+[![Status: Active](https://img.shields.io/badge/Status-Maintained-success.svg)]()
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/ml-lubich/humanizer/pulls)
 
-A portable agent skill that removes signs of AI-generated writing from text, making it sound more natural and human. It is plain Markdown, so it can run in any harness that supports skill-style instructions.
+> **Enterprise-grade, portable agent skill that strips AI-generated tells, synthetic mannerisms, and robotic markers from prose while preserving facts and core voice.** Based on Wikipedia's comprehensive *Signs of AI Writing* field guide.
 
 ## Installation
 
