@@ -204,6 +204,16 @@ Rewrites follow a no-fabrication rule: they never add facts, names, dates, or ci
 >
 > I would go back, but in spring and with better shoes. Lisbon does not bend over backward to make things easy for you. I think I liked that, even when my legs disagreed.
 
+## Voice DNA (train it on your own tone)
+
+Plain-prose cleanup still sounds like a model. The bundled `voice-dna` skill fixes that: hand it files, a folder, a PDF, or pasted samples, and it measures sentence length, contractions, first person, em dashes, and sentence skeletons into a local profile. Humanizer then removes the AI tells and rewrites in that profile's rhythm instead of generic prose. It works for your voice or anyone's you have writing from. Runs locally, no API token.
+
+```
+npx skills add ml-lubich/humanizer --skill voice-dna
+```
+
+Then ask: "use voice-dna on this text, samples are in ~/Documents/writing". The profile is saved to `~/.config/voice-dna/profile.json`.
+
 ## References
 
 - [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) - Primary source
@@ -211,6 +221,8 @@ Rewrites follow a no-fabrication rule: they never add facts, names, dates, or ci
 
 ## Version History
 
+- **2.10.0** - Bundled the `voice-dna` skill and agent. Point it at your own writing (txt, md, pdf, docx, rtf, html) and it builds a local mannerism profile (sentence rhythm, contractions, em dashes, openers), so the rewrite sounds like you or anyone you have samples of, not like a cleaned-up chatbot. No API token. No change to the 33 patterns.
+- **2.9.2** - Personal-voice rewrites defer to the voice-dna skill when a mannerism profile exists, so AI-pattern cleanup is not the replacement voice. No change to the 33 patterns.
 - **2.9.1** - Improved distribution and portability: removed nonportable frontmatter and tool preapprovals, made global installation the documented default, added package validation, and removed the duplicated long-form example from the runtime prompt. No change to the 33 patterns.
 - **2.9.0** - Added a no-fabrication rule: rewrites may not invent facts, names, dates, or citations not present in the source, and every example that modeled invented specifics was re-cut to use only source information (fixes #187). Replaced paragraph-count parity with an information-over-shape rule, made a user's voice sample outrank the em dash ban, and added invocation modes (pasted text / file / embedded). No change to the 33 patterns.
 - **2.8.3** - Moved the skill version from the unsupported top-level frontmatter key to `metadata.version` for Agent Skills and Claude compatibility. No change to the 33 patterns.

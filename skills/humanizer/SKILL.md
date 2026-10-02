@@ -9,7 +9,7 @@ description: |
   voice, negative parallelisms, and filler phrases.
 license: MIT
 metadata:
-  version: "2.9.1"
+  version: "2.10.0"
 ---
 
 # Humanizer: Remove AI Writing Patterns
@@ -36,6 +36,12 @@ If the user provides a writing sample (their own previous writing), analyze it b
 3. Without a sample, use the default behavior below.
 
 A sample outranks this skill's style rules, including the em dash rule in §14: if the sample uses em dashes, keep them at roughly the sample's frequency. Matching the author beats scrubbing the tell.
+
+## Personal mannerisms (voice-dna)
+
+A pasted sample is a hint. A measured profile is the constraint. If the user wants their own mannerisms, or `~/.config/voice-dna/profile.json` exists, read the `voice-dna` skill and follow it before rewriting.
+
+Use the numbered patterns in this file as the detection list. Do not treat the "After" examples as the voice to imitate once a profile exists. Those examples are neutral on purpose, and a neutral replacement still sounds like a model. The profile's em-dash rate overrides §14.
 
 ## PERSONALITY AND SOUL
 
